@@ -5,7 +5,7 @@ echo -n "N--> "
 read n
 
 # 行数算出　wcは行数とファイル名を出力するのでcutで行数のみ切り出し
-count=`wc -l popular-names.txt | cut --fields=1 --delimiter=" "`
+count=`wc -l popular-names.txt | cut -f 1 -d " "`
 
 # 1分割当たりの行数算出　余りがある場合は行数を+1
 unit=`expr $count / $n`
